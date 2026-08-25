@@ -11,3 +11,5 @@ class Transaction:
         return self.curr_value(current_price) - self.invested()
     def return_percent(self, current_price):
         return (self.profit(current_price) / self.invested()) * 100
+    def money_loss(self, current_price):
+        return self.invested() - self.curr_value(current_price)
